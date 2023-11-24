@@ -1,0 +1,69 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+     <style>
+        #submit {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #taskList li {
+            color: red;
+        }
+    </style>
+</head>
+<body bgcolor="orange">
+
+    <h2>Task List</h2>
+    <form id="taskForm">
+        <input type="text" id="newTask" placeholder="Enter task">
+        <button type="submit" id="submit" disabled>Submit</button>
+    </form>
+    
+    <ul id="taskList"></ul>
+
+    <script>
+        
+        const submit = document.getElementById('submit');
+        const newTask = document.getElementById('newTask');
+
+        
+        submit.disabled = true;
+
+        
+        newTask.addEventListener('input', function() {
+            // Enable/disable the submit button based on input
+            submit.disabled = newTask.value.trim() === '';
+        });
+
+        
+        document.getElementById('taskForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            
+            const taskText = newTask.value.trim();
+
+            
+            const newListItem = document.createElement('li');
+            newListItem.textContent = taskText;
+
+           
+            document.getElementById('taskList').appendChild(newListItem);
+
+           
+            newTask.value = '';
+
+        
+            submit.disabled = true;
+        });
+    </script>
+</body>
+</html>
