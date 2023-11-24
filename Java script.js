@@ -1,3 +1,10 @@
+// ICS 2203 - Internet Apllication Programming;
+// ToDo LIST assignment;
+
+/*
+GROUP MEMBERS;
+ 
+*/
 <script>
         
 const submit = document.getElementById('submit');
