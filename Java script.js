@@ -9,6 +9,7 @@ SCT211-0022/2022 - Adrian Baraka;
 SCT211-0869/2022 - Jacob Kasunzu John;
 SCT211-0032/2022 - Benedict Waweru;
 SCT211-0581/2021- Serena Mumbi Kimiri;
+Sct211-0038/2021 - FELIX OYOO;
  
 */
 <script>
